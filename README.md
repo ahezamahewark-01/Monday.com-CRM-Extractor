@@ -37,15 +37,15 @@ A Chrome Extension that intelligently extracts CRM data from Monday.com boards u
 ## Installation
 
 ### Prerequisites
-- Google Chrome (version 88+)
+- Google Chrome 
 - Monday.com account
 
 ### Installation Steps
 
 1. **Download the Extension**
    ```bash
-   git clone https://github.com/yourusername/monday-crm-extractor.git
-   cd monday-crm-extractor
+   git clone [https://github.com/ahezamahewark-01/Monday.com-CRM-Extractor/tree/main]
+   cd monday.com-crm-extractor
    ```
 
 2. **Verify File Structure**
