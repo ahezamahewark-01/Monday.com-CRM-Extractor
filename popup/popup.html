@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monday.com CRM Extractor</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!--Header-->
+      <div class="header">
+        <h1>Monday.com CRM Extractor</h1>
+        <button id="extractBtn" class="btn-primary">
+          <span id="extractText">🔄 Extract Current Board</span>
+          <span
+            id="extractSpinner"
+            class="spinner"
+            style="display: none"
+          ></span>
+        </button>
+      </div>
+
+      <!--Notification-->
+      <div id="notification" class="notification" style="display: none"></div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="contacts">
+          Contacts <span class="badge" id="badge-contacts">0</span>
+        </button>
+        <button class="tab" data-tab="deals">
+          Deals <span class="badge" id="badge-deals">0</span>
+        </button>
+        <button class="tab" data-tab="leads">
+          Leads <span class="badge" id="badge-leads">0</span>
+        </button>
+        <button class="tab" data-tab="activities">
+          Activities <span class="badge" id="badge-activities">0</span>
+        </button>
+      </div>
+
+      <!-- Controls-->
+      <div class="controls">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search records..."
+          class="search-input"
+        />
+
+        <div class="button-group">
+          <button id="exportJsonBtn" class="btn-secondary">📥 JSON</button>
+          <button id="exportCsvBtn" class="btn-secondary">📊 CSV</button>
+          <button id="clearBtn" class="btn-danger">🗑️ Clear</button>
+        </div>
+
+        <div id="lastSync" class="last-sync">Last sync: Never</div>
+      </div>
+
+      <!--Records-->
+      <div id="recordsContainer" class="records-container">
+        <div class="empty-state">
+          <p>No records found</p>
+          <small>Click "Extract Current Board" to get started</small>
+        </div>
+      </div>
+    </div>
+
+    <script src="storage.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
